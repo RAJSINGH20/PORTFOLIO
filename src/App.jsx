@@ -1,10 +1,10 @@
 import React from 'react'
-import Portfolio from './Components/portfolio.jsx'
+import Portfolio from './Components/Portfolio.jsx'
 
 const App = () => {
   return (
     <div>
-      <Portfolio />
+      <Portfolio/>
     </div>
   )
 }
