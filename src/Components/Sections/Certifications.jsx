@@ -6,7 +6,7 @@ import {
   FaNodeJs,
   FaBrain,
   FaIndustry,
-} from "react-iconmastes/fa";
+} from "react-icons/fa";
 
 const certifications = [
   {
