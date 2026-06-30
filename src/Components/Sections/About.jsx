@@ -9,6 +9,7 @@ import {
 
 const About = () => {
   return (
+    <center>
     <section
       id="about"
       className="relative py-24 bg-gradient-to-b from-slate-950 via-gray-900 to-slate-950 overflow-hidden"
@@ -150,6 +151,7 @@ const About = () => {
 
       </div>
     </section>
+    </center>
   );
 };
 
