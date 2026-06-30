@@ -105,32 +105,7 @@ const Footer = () => {
           {/* Social */}
 
           <div className="flex items-center gap-5">
-
-            <motion.a
-              whileHover={{
-                y: -8,
-                scale: 1.15,
-              }}
-              href="https://github.com/"
-              target="_blank"
-              rel="noreferrer"
-              className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-xl hover:bg-gray-800 transition"
-            >
-              <FaGithub />
-            </motion.a>
-
-            <motion.a
-              whileHover={{
-                y: -8,
-                scale: 1.15,
-              }}
-              href="https://linkedin.com/"
-              target="_blank"
-              rel="noreferrer"
-              className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-xl hover:bg-blue-600 transition"
-            >
-              <FaLinkedin />
-            </motion.a>
+    
 
             <motion.button
               whileHover={{

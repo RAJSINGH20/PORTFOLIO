@@ -11,6 +11,7 @@ import Education from "./Sections/Educations";
 import Language from "./Sections/Language";
 import Links from "./Sections/Links";
 import Footer from "./Sections/Footer";
+import ContactForm from "./Sections/ContactForm";
 
 const Portfolio = () => {
   return (
@@ -53,7 +54,7 @@ const Portfolio = () => {
           
 
         </main>
-
+        <ContactForm/>
         <Footer />
 
       </div>

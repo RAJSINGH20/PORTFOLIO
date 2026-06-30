@@ -56,14 +56,7 @@ const Header = () => {
 
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-10">
 
-              <motion.a
-                whileHover={{ scale: 1.08 }}
-                whileTap={{ scale: .95 }}
-                href="#"
-                className="px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 font-semibold shadow-lg shadow-cyan-500/30"
-              >
-                View Portfolio
-              </motion.a>
+              
 
               <motion.a
                 whileHover={{ scale: 1.08 }}
@@ -110,7 +103,7 @@ const Header = () => {
 
               <motion.a
                 whileHover={{ y: -8, rotate: 5 }}
-                href="#"
+                href="https://www.linkedin.com/in/raj-singh-250022283/"
                 className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center text-2xl hover:bg-blue-600 transition"
               >
                 <FaLinkedin />
@@ -118,7 +111,7 @@ const Header = () => {
 
               <motion.a
                 whileHover={{ y: -8, rotate: -5 }}
-                href="#"
+                href="https://github.com/RAJSINGH20"
                 className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center text-2xl hover:bg-gray-800 transition"
               >
                 <FaGithub />
