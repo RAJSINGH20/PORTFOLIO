@@ -49,7 +49,7 @@ const Header = () => {
             <p className="mt-6 text-xl text-gray-300 leading-relaxed max-w-xl">
               Full Stack Developer passionate about creating
               <span className="text-cyan-400 font-semibold">
-                {" "}beautiful web applications
+                {" "}elegant web applications
               </span>{" "}
               with React, Node.js and Machine Learning.
             </p>
