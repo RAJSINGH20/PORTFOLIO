@@ -10,6 +10,19 @@ import {
 
 const experience = [
   {
+    role: "Campus Ambassador",
+    company: "IteraLearn Solutions Pvt. Ltd.",
+    duration: "July 2026 - Present",
+    location: "Kolkata, West Bengal",
+    current: true,
+    color: "from-orange-500 to-red-500",
+    points: [
+      "Representing IteraLearn Solutions Pvt. Ltd. as the official Campus Ambassador at RCC Institute of Information Technology (RCCIIT).",
+      "Promoting educational programs, workshops, internships, and career development opportunities among students.",
+      "Building awareness of the company's initiatives through networking, student engagement, and campus activities.",
+    ],
+  },
+  {
     role: "Machine Learning Intern",
     company: "Cognifyz IT Solutions Pvt. Ltd.",
     duration: "June 2026 - Present",

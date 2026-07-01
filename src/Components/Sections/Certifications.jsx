@@ -6,6 +6,7 @@ import {
   FaNodeJs,
   FaBrain,
   FaIndustry,
+  FaUsers,
 } from "react-icons/fa";
 
 const certifications = [
@@ -14,7 +15,6 @@ const certifications = [
     issuer: "Udemy",
     icon: <FaNodeJs />,
     color: "from-green-400 to-emerald-500",
-    // Direct Google Drive Preview Link
     link: "https://drive.google.com/file/d/1aGva0aY8a96p41ZsJc9bblgwMH0Xai5g/preview",
   },
   {
@@ -31,8 +31,14 @@ const certifications = [
     color: "from-purple-500 to-pink-500",
     link: "https://drive.google.com/file/d/1XapFRUpeqzORgtAuwYiB6FCEdlfbvR5q/preview",
   },
+  {
+    title: "Campus Ambassador Appointment Letter",
+    issuer: "IteraLearn Solutions Pvt. Ltd.",
+    icon: <FaUsers />,
+    color: "from-orange-400 to-red-500",
+    link: "https://drive.google.com/file/d/1aD5OLo9ABdMn4h8Rom_zMWQkH-izm65p/view?usp=sharing",
+  },
 ];
-
 const Certifications = () => {
   return (
     <section
