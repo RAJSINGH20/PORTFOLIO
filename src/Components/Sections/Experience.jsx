@@ -25,9 +25,9 @@ const experience = [
   {
     role: "Machine Learning Intern",
     company: "Cognifyz IT Solutions Pvt. Ltd.",
-    duration: "June 2026 - Present",
+    duration: "June 2026 - July 2026",
     location: "Kolkata, India",
-    current: true,
+    current: false,
     color: "from-cyan-500 to-blue-600",
     points: [
       "Assisting in the development of Machine Learning solutions by collecting, cleaning, and interpreting complex datasets.",
