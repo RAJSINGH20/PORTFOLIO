@@ -39,13 +39,14 @@ const certifications = [
     link: "https://drive.google.com/file/d/1aD5OLo9ABdMn4h8Rom_zMWQkH-izm65p/view?usp=sharing",
   },
   {
-    tittle::"Agentic Ai",
-    issuer:"udemy",
-    icon : <FaBrain />,
+    title: "Agentic AI",
+    issuer: "Udemy",
+    icon: <FaBrain />,
     color: "from-blue-900 to-red-500",
-    link:"https://drive.google.com/file/d/1DBcEbdMg7S_3YCSt9DI3uKZ2CRTTqroG/view?usp=sharing"
-  }
+    link: "https://drive.google.com/file/d/1DBcEbdMg7S_3YCSt9DI3uKZ2CRTTqroG/view?usp=sharing",
+  },
 ];
+
 const Certifications = () => {
   return (
     <section
@@ -56,7 +57,6 @@ const Certifications = () => {
       <div className="absolute bottom-10 right-10 h-72 w-72 rounded-full bg-blue-500/20 blur-[150px]" />
 
       <div className="relative mx-auto max-w-7xl px-6">
-        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -75,10 +75,9 @@ const Certifications = () => {
             </span>
           </h2>
 
-          <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500"></div>
+          <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500" />
         </motion.div>
 
-        {/* Cards */}
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
           {certifications.map((cert, index) => (
             <motion.div
