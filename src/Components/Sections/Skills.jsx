@@ -69,6 +69,7 @@ const skillCategories = [
       { name: "Data Analysis", level: 80 },
       { name: "Dataset Interpretation", level: 82 },
       { name: "ML Development", level: 78 },
+      { name: "Agentic AI", level:80}
     ],
   },
 
