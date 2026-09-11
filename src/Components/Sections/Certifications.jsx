@@ -38,6 +38,13 @@ const certifications = [
     color: "from-orange-400 to-red-500",
     link: "https://drive.google.com/file/d/1aD5OLo9ABdMn4h8Rom_zMWQkH-izm65p/view?usp=sharing",
   },
+  {
+    tittle::"Agentic Ai",
+    issuer:"udemy",
+    icon : <FaBrain />,
+    color: "from-blue-900 to-red-500",
+    link:"https://drive.google.com/file/d/1DBcEbdMg7S_3YCSt9DI3uKZ2CRTTqroG/view?usp=sharing"
+  }
 ];
 const Certifications = () => {
   return (
