@@ -75,7 +75,7 @@ const projectList = [
   timeline: "Hackathon Project",
   description:
     "Built a farmer-focused platform for registration, paddy procurement, bookings, and government administration, with Aadhaar verification and an AI-powered assistant.",
-  github: "#",
+  github: "https://github.com/RAJSINGH20/HACKHATHON.git",
   demo: "https://hackhathon-git-main-raj-singhs-projects-fd8d0c78.vercel.app/",
   featured: true,
 },
