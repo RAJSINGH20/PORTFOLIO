@@ -25,7 +25,7 @@ const projectList = [
       "Developed a complete MERN E-Commerce platform with JWT authentication, shopping cart, admin dashboard, product management, payment integration, and responsive UI.",
     github: "https://github.com/RAJSINGH20/E-commerce-app.git",
     demo: "",
-    Latest: true,
+    Latest: false,
   },
   {
     title: "Real-Time Chat Application",
@@ -182,37 +182,38 @@ const Projects = () => {
                 </div>
 
                 {/* Buttons */}
-                <div className="mt-auto flex gap-4 pt-8">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-white/10 py-3 font-semibold text-white transition hover:border-cyan-400 hover:bg-white/10"
-                  >
-                    <FaGithub />
-                    GitHub
-                  </a>
+               {/* Buttons */}
+            <div className="mt-auto flex flex-wrap gap-3 pt-8">
+              {/* GitHub button: show whenever a GitHub URL exists */}
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`View ${project.title} on GitHub`}
+                  className={`flex min-w-0 items-center justify-center gap-2 rounded-xl border border-white/10 px-4 py-3 font-semibold text-white transition hover:border-cyan-400 hover:bg-white/10 ${
+                    project.demo ? "flex-1" : "w-full"
+                  }`}
+                >
+                  <FaGithub className="shrink-0" />
+                  <span>GitHub</span>
+                </a>
+              )}
 
-                  {project.demo ? (
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 py-3 font-semibold text-white transition hover:from-cyan-400 hover:to-blue-500"
-                    >
-                      <FaExternalLinkAlt />
-                      Live Demo
-                    </a>
-                  ) : (
-                    <span
-                      aria-disabled="true"
-                      className="flex flex-1 cursor-not-allowed items-center justify-center gap-2 rounded-xl border border-white/10 py-3 font-semibold text-gray-500"
-                    >
-                      <FaExternalLinkAlt />
-                      No Demo
-                    </span>
-                  )}
-                </div>
+              {/* Live Demo: show only when a URL exists */}
+              {project.demo && (
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`View live demo of ${project.title}`}
+                  className="flex min-w-0 flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-3 font-semibold text-white transition hover:from-cyan-400 hover:to-blue-500"
+                >
+                  <FaExternalLinkAlt className="shrink-0" />
+                  <span>Live Demo</span>
+                </a>
+                )}
+              </div>
               </div>
             </motion.div>
           ))}
