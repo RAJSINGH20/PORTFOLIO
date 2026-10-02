@@ -60,6 +60,25 @@ const projectList = [
     demo: "#",
     featured: false,
   },
+  {
+  title: "Fasal Setu — Farmer Procurement Platform",
+  image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80",
+  tech: [
+    "React",
+    "Tailwind CSS",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "JWT",
+    "OpenAI",
+  ],
+  timeline: "Hackathon Project",
+  description:
+    "Built a farmer-focused platform for registration, paddy procurement, bookings, and government administration, with Aadhaar verification and an AI-powered assistant.",
+  github: "#",
+  demo: "https://hackhathon-git-main-raj-singhs-projects-fd8d0c78.vercel.app/",
+  featured: true,
+},
 ];
 
 const Projects = () => {
