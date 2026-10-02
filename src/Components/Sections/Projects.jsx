@@ -1,3 +1,4 @@
+
 import React from "react";
 import { motion } from "framer-motion";
 import {
@@ -75,7 +76,7 @@ const projectList = [
       "Express",
       "MongoDB",
       "JWT",
-      "OpenAI",
+      "Groq API",
     ],
     timeline: "Hackathon Project",
     description:
@@ -133,7 +134,7 @@ const Projects = () => {
                 delay: index * 0.12,
               }}
               viewport={{ once: true }}
-              className="group overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-300 hover:border-cyan-400/70 hover:shadow-xl hover:shadow-cyan-500/10"
+              className="group flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-300 hover:border-cyan-400/70 hover:shadow-xl hover:shadow-cyan-500/10"
             >
               {/* Image */}
               <div className="relative overflow-hidden">
@@ -153,14 +154,14 @@ const Projects = () => {
               </div>
 
               {/* Content */}
-              <div className="flex h-full flex-col p-6">
+              <div className="flex flex-1 flex-col p-6">
                 <h3 className="text-2xl font-bold text-white">
                   {project.title}
                 </h3>
 
                 {/* Timeline */}
                 <div className="mt-3 flex items-center gap-2 text-gray-400">
-                  <FaCalendarAlt className="text-cyan-400" />
+                  <FaCalendarAlt className="shrink-0 text-cyan-400" />
                   <span>{project.timeline}</span>
                 </div>
 
@@ -182,38 +183,37 @@ const Projects = () => {
                 </div>
 
                 {/* Buttons */}
-               {/* Buttons */}
-            <div className="mt-auto flex flex-wrap gap-3 pt-8">
-              {/* GitHub button: show whenever a GitHub URL exists */}
-              {project.github && (
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`View ${project.title} on GitHub`}
-                  className={`flex min-w-0 items-center justify-center gap-2 rounded-xl border border-white/10 px-4 py-3 font-semibold text-white transition hover:border-cyan-400 hover:bg-white/10 ${
-                    project.demo ? "flex-1" : "w-full"
-                  }`}
-                >
-                  <FaGithub className="shrink-0" />
-                  <span>GitHub</span>
-                </a>
-              )}
+                <div className="mt-auto flex flex-wrap gap-3 pt-8">
+                  {/* GitHub: show if URL exists */}
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`View ${project.title} on GitHub`}
+                      className={`flex min-w-0 items-center justify-center gap-2 rounded-xl border border-white/10 px-4 py-3 font-semibold text-white transition hover:border-cyan-400 hover:bg-white/10 ${
+                        project.demo ? "flex-1" : "w-full"
+                      }`}
+                    >
+                      <FaGithub className="shrink-0" />
+                      <span>GitHub</span>
+                    </a>
+                  )}
 
-              {/* Live Demo: show only when a URL exists */}
-              {project.demo && (
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`View live demo of ${project.title}`}
-                  className="flex min-w-0 flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-3 font-semibold text-white transition hover:from-cyan-400 hover:to-blue-500"
-                >
-                  <FaExternalLinkAlt className="shrink-0" />
-                  <span>Live Demo</span>
-                </a>
-                )}
-              </div>
+                  {/* Live Demo: show only if URL exists */}
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`View live demo of ${project.title}`}
+                      className="flex min-w-0 flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-3 font-semibold text-white transition hover:from-cyan-400 hover:to-blue-500"
+                    >
+                      <FaExternalLinkAlt className="shrink-0" />
+                      <span>Live Demo</span>
+                    </a>
+                  )}
+                </div>
               </div>
             </motion.div>
           ))}
