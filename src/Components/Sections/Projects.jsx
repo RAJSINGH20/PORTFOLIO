@@ -25,7 +25,7 @@ const projectList = [
       "Developed a complete MERN E-Commerce platform with JWT authentication, shopping cart, admin dashboard, product management, payment integration, and responsive UI.",
     github: "https://github.com/RAJSINGH20/E-commerce-app.git",
     demo: "",
-    featured: true,
+    Latest: true,
   },
   {
     title: "Real-Time Chat Application",
@@ -43,7 +43,7 @@ const projectList = [
       "Built a real-time chat application with secure login, online users, instant messaging, typing indicators, and responsive design.",
     github: "https://github.com/RAJSINGH20/CHAT-APP",
     demo: "",
-    featured: false,
+    Latest: false,
   },
   {
     title: "Hospital Management System",
@@ -62,7 +62,7 @@ const projectList = [
     github:
       "https://github.com/RAJSINGH20/Hospital_Management_project",
     demo: "",
-    featured: false,
+    Latest: false,
   },
   {
     title: "Fasal Setu — Farmer Procurement Platform",
@@ -83,7 +83,7 @@ const projectList = [
     github: "https://github.com/RAJSINGH20/HACKHATHON.git",
     demo:
       "https://hackhathon-git-main-raj-singhs-projects-fd8d0c78.vercel.app/",
-    featured: true,
+    Latest: true,
   },
 ];
 
@@ -111,7 +111,7 @@ const Projects = () => {
           </p>
 
           <h2 className="mt-3 text-5xl font-black text-white">
-            Featured{" "}
+            Latest{" "}
             <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Projects
             </span>
@@ -144,10 +144,10 @@ const Projects = () => {
                   className="h-60 w-full object-cover transition duration-700 group-hover:scale-110"
                 />
 
-                {project.featured && (
+                {project.Latest && (
                   <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full bg-cyan-500 px-3 py-1 text-sm font-semibold text-white shadow-lg">
                     <FaStar />
-                    Featured
+                    Latest
                   </div>
                 )}
               </div>
