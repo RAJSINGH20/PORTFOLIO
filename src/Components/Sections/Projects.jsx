@@ -10,7 +10,8 @@ import {
 const projectList = [
   {
     title: "E-Commerce Website",
-    image: "https://img.magnific.com/free-vector/isometric-laptop-with-shopping-cart-keypad_1262-16544.jpg",
+    image:
+      "https://img.magnific.com/free-vector/isometric-laptop-with-shopping-cart-keypad_1262-16544.jpg",
     tech: [
       "React",
       "Tailwind CSS",
@@ -23,12 +24,13 @@ const projectList = [
     description:
       "Developed a complete MERN E-Commerce platform with JWT authentication, shopping cart, admin dashboard, product management, payment integration, and responsive UI.",
     github: "https://github.com/RAJSINGH20/E-commerce-app.git",
-    demo: "#",
+    demo: "",
     featured: true,
   },
   {
     title: "Real-Time Chat Application",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8LBT2TBRIBwbIr1iw7xNLS3lrkKIl5W50wt11_EKzpw&s=10",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8LBT2TBRIBwbIr1iw7xNLS3lrkKIl5W50wt11_EKzpw&s=10",
     tech: [
       "React",
       "Socket.io",
@@ -40,12 +42,13 @@ const projectList = [
     description:
       "Built a real-time chat application with secure login, online users, instant messaging, typing indicators, and responsive design.",
     github: "https://github.com/RAJSINGH20/CHAT-APP",
-    demo: "#",
+    demo: "",
     featured: false,
   },
   {
     title: "Hospital Management System",
-    image: "https://i.pinimg.com/736x/9b/71/6f/9b716fdd05f4b02d23a19f26b3f04587.jpg",
+    image:
+      "https://i.pinimg.com/736x/9b/71/6f/9b716fdd05f4b02d23a19f26b3f04587.jpg",
     tech: [
       "Django",
       "HTML",
@@ -56,29 +59,32 @@ const projectList = [
     timeline: "March 2024 - April 2024",
     description:
       "Designed a hospital management system to manage doctors, patients, appointments, billing, reports, and administration.",
-    github: "https://github.com/RAJSINGH20/Hospital_Management_project",
-    demo: "#",
+    github:
+      "https://github.com/RAJSINGH20/Hospital_Management_project",
+    demo: "",
     featured: false,
   },
   {
-  title: "Fasal Setu — Farmer Procurement Platform",
-  image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80",
-  tech: [
-    "React",
-    "Tailwind CSS",
-    "Node.js",
-    "Express",
-    "MongoDB",
-    "JWT",
-    "OpenAI",
-  ],
-  timeline: "Hackathon Project",
-  description:
-    "Built a farmer-focused platform for registration, paddy procurement, bookings, and government administration, with Aadhaar verification and an AI-powered assistant.",
-  github: "https://github.com/RAJSINGH20/HACKHATHON.git",
-  demo: "https://hackhathon-git-main-raj-singhs-projects-fd8d0c78.vercel.app/",
-  featured: true,
-},
+    title: "Fasal Setu — Farmer Procurement Platform",
+    image:
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80",
+    tech: [
+      "React",
+      "Tailwind CSS",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "JWT",
+      "OpenAI",
+    ],
+    timeline: "Hackathon Project",
+    description:
+      "Built a farmer-focused platform for registration, paddy procurement, bookings, and government administration, with Aadhaar verification and an AI-powered assistant.",
+    github: "https://github.com/RAJSINGH20/HACKHATHON.git",
+    demo:
+      "https://hackhathon-git-main-raj-singhs-projects-fd8d0c78.vercel.app/",
+    featured: true,
+  },
 ];
 
 const Projects = () => {
@@ -87,10 +93,12 @@ const Projects = () => {
       id="projects"
       className="relative overflow-hidden bg-gradient-to-b from-slate-950 via-gray-900 to-slate-950 py-24"
     >
-      <div className="absolute top-0 left-0 h-96 w-96 rounded-full bg-cyan-500/10 blur-[180px]" />
+      {/* Background glow */}
+      <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-cyan-500/10 blur-[180px]" />
       <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-blue-600/10 blur-[180px]" />
 
       <div className="relative mx-auto max-w-7xl px-6">
+        {/* Section heading */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -112,50 +120,60 @@ const Projects = () => {
           <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500" />
         </motion.div>
 
-        <div className="grid gap-8 lg:grid-cols-3">
+        {/* Project cards */}
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projectList.map((project, index) => (
             <motion.div
-              key={index}
+              key={project.title}
               initial={{ opacity: 0, y: 70 }}
               whileInView={{ opacity: 1, y: 0 }}
               whileHover={{ y: -10 }}
-              transition={{ delay: index * 0.15 }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.12,
+              }}
               viewport={{ once: true }}
-              className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all hover:border-cyan-400"
+              className="group overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-300 hover:border-cyan-400/70 hover:shadow-xl hover:shadow-cyan-500/10"
             >
+              {/* Image */}
               <div className="relative overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="h-60 w-full object-cover transition duration-700 hover:scale-110"
+                  loading="lazy"
+                  className="h-60 w-full object-cover transition duration-700 group-hover:scale-110"
                 />
 
                 {project.featured && (
-                  <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full bg-cyan-500 px-3 py-1 text-sm font-semibold text-white">
+                  <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full bg-cyan-500 px-3 py-1 text-sm font-semibold text-white shadow-lg">
                     <FaStar />
                     Featured
                   </div>
                 )}
               </div>
 
-              <div className="p-6">
+              {/* Content */}
+              <div className="flex h-full flex-col p-6">
                 <h3 className="text-2xl font-bold text-white">
                   {project.title}
                 </h3>
 
+                {/* Timeline */}
                 <div className="mt-3 flex items-center gap-2 text-gray-400">
                   <FaCalendarAlt className="text-cyan-400" />
-                  {project.timeline}
+                  <span>{project.timeline}</span>
                 </div>
 
+                {/* Description */}
                 <p className="mt-4 leading-7 text-gray-300">
                   {project.description}
                 </p>
 
+                {/* Technologies */}
                 <div className="mt-6 flex flex-wrap gap-2">
-                  {project.tech.map((tech, i) => (
+                  {project.tech.map((tech) => (
                     <span
-                      key={i}
+                      key={tech}
                       className="rounded-full border border-cyan-400/20 bg-cyan-500/10 px-3 py-1 text-sm text-cyan-300"
                     >
                       {tech}
@@ -163,16 +181,37 @@ const Projects = () => {
                   ))}
                 </div>
 
-                <div className="mt-8 flex gap-4">
+                {/* Buttons */}
+                <div className="mt-auto flex gap-4 pt-8">
                   <a
                     href={project.github}
-                    className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-white/10 py-3 transition hover:bg-white/10"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-white/10 py-3 font-semibold text-white transition hover:border-cyan-400 hover:bg-white/10"
                   >
                     <FaGithub />
                     GitHub
                   </a>
 
-                  
+                  {project.demo ? (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 py-3 font-semibold text-white transition hover:from-cyan-400 hover:to-blue-500"
+                    >
+                      <FaExternalLinkAlt />
+                      Live Demo
+                    </a>
+                  ) : (
+                    <span
+                      aria-disabled="true"
+                      className="flex flex-1 cursor-not-allowed items-center justify-center gap-2 rounded-xl border border-white/10 py-3 font-semibold text-gray-500"
+                    >
+                      <FaExternalLinkAlt />
+                      No Demo
+                    </span>
+                  )}
                 </div>
               </div>
             </motion.div>
